@@ -1,0 +1,169 @@
+% [[- LaTeX prelude
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[no-math]{fontspec}
+\setmainfont{Baskerville}
+
+% Ugh: https://tex.stackexchange.com/a/400994/29387
+% This no longer seems necessary, but I’ll leave it for a bit.
+% \usepackage[base]{babel}
+\usepackage[nolocalmarks]{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage[variant=classic]{latin}
+\setotherlanguage[variant=ancient]{greek}
+\newfontfamily\greekfont[Script=Greek,Scale=MatchLowercase]{GFS Neohellenic}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\bfseries}
+\titleformat*{\subsubsection}{\bfseries}
+
+\usepackage{parskip}
+\usepackage{csquotes}
+\usepackage[style=windycity,citetracker=context,backend=biber]{biblatex}
+\addbibresource{good-lives.bib}
+
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage[super]{nth}
+
+\begin{hyphenrules}{latin}
+    \hyphenation{}
+\end{hyphenrules}
+
+\begin{hyphenrules}{greek}
+    \hyphenation{}
+\end{hyphenrules}
+
+\usepackage{fancyhdr}
+\fancypagestyle{notes}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{Notes on ``Two Conceptions of Happiness''}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+\fancypagestyle{references}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{Bibliography}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+% -]] Latex prelude
+
+% [[- LaTeX document
+\begin{document}
+
+% [[- Title page
+% \begin{titlepage}
+% \title{Notes on Two Conceptions of Happiness (Richard Kraut)}
+% \author{Peter Aronoff}
+% \maketitle
+% \thispagestyle{empty}
+% \end{titlepage}
+% -]]
+
+\pagestyle{notes}
+
+% [[- Introduction (Section I)
+\section*{Introduction (Section I)}
+
+Richard Kraut argues that we disagree with Aristotle over how to determine which people lead happy lives.
+However, Kraut also argues that the usual way to distinguish Aristotle from us is wrong.
+Most people, according to Kraut, say that happiness ``is, or at least involves, a certain state of mind'' but that \textit{eudaimonia} ``does not name a feeling or emotion.''%
+\footcite[][167]{two-conceptions-of-happiness-kraut-1979}
+According to Kraut, however, both happiness and \textit{eudaimonia} require ``certain attitudes towards one's life'' and that we ``measure up to certain standards.''%
+\footcite[][197]{two-conceptions-of-happiness-kraut-1979}
+That is, Aristotle agrees with us that \textit{eudaimonia} requires certain mental states.
+
+In that case, where does Kraut think that we differ from Aristotle? Kraut explains as follows.
+
+\begin{quote}
+    Where we and Aristotle sharply disagree is over the standards to be used in evaluating lives.
+    Roughly, he insists on an objective and stringent standard, whereas our test is more subjective and flexible.%
+    \footcite[][197]{two-conceptions-of-happiness-kraut-1979}
+\end{quote}
+
+In addition, Kraut argues, contrary to a dominant scholarly view, that Aristotle does use \textit{eudaimonia} in ways parallel to our happiness.
+Therefore, Kraut objects to translations of \textit{eudaimonia} as ``well-being'' or ``flourishing.''
+% -]] Introduction (Section I)
+
+% [[- Happy State of Mind (Section II)
+\section*{Happy State of Mind (Section II)}
+
+In this section, Kraut argues that Aristotle's \textit{eudaimon} is in the same positive state of mind as a contemporary happy person.
+Kraut offers three arguments for this conclusion; the first relies on inference from what Aristotle says about the \textit{eudaimon}, and the other two rely on Aristotle's explicit arguments.
+
+Here is Kraut's first argument.
+
+\begin{enumerate}
+    \item ``When we say that someone is living happily, we imply that he has certain attitudes towards his life: he is very glad to be alive; he judges that on balance his deepest desires are being satisfied and that the circumstances of his life are turning out well.''%
+    \footcite[][170]{two-conceptions-of-happiness-kraut-1979}
+    \item ``[The \textit{eudaimon}] loves the activities he regularly and successfully engages in.
+        He thinks that exercising one's intellectual and moral capacities is the greates good available to human beings, and he knows that he possesses this good.
+        Furthermore, he has all the other major goods he wants.
+        His desire for such external goals as honor, wealth, and physical pleasure is moderate, and should be easy enough to satisfy in a normal life.''%
+        \footcite[][170--171]{two-conceptions-of-happiness-kraut-1979}
+    \item ``So, the individual who is most \textit{eudaimon} on Aristotle's theory passes our tests for happiness with flying colors.''%
+        \footcite[][171]{two-conceptions-of-happiness-kraut-1979}
+\end{enumerate}
+
+Next, Kraut reminds us of something Aristotle that says explicitly.
+According to Aristotle, good and fortunate people desire life most of all (\textit{NE} 1170a26--29).
+Kraut says that Aristotle ``cannot mean that [\textit{the eudaimon}] will struggle to stay alive at any cost.
+Rather, he must mean that such individuals are more glad to be alive than others; the kind of existence they enjoy gives them a heightened love of life.''%
+\footcite[][1970]{two-conceptions-of-happiness-kraut-1979}
+
+As part of this second argument, Kraut also points to passages where Aristotle says that people who possess \textit{eudaimonia} ``have the most reason to live'' and that ``they are the very opposite of the sort of individual who is so miserable and filled with self-hatred that he contemplates suicide.''
+\footcite[][172]{two-conceptions-of-happiness-kraut-1979}
+(Kraut refers to \textit{NE} 1117b9--13 and 1166b11--28 as support for his argument.)
+
+For his final argument, Kraut turns to distinctions that Aristotle makes between humans, other animals, and plants.
+(To support this argument, Kraut refers to \textit{DA} 413b1--2 and \textit{NE} 1070a16--17, where Aristotle explains that animals differ from plants because they perceive.
+He also refers to \textit{EE} 1216a2--6, \textit{NE} 1095b32--35, and \textit{NE} 1176a34--35, where Aristotle says that no one would choose a lifetime of sleep since that is the life of a plant.)
+
+\begin{enumerate}
+    \item Unlike plants, says Aristotle, humans and other animals form desires for what we take to be good for us.
+    \item Unlike other animals, humans form second-order desires for our first-order desires to be met.
+        Non-human animals want all sorts of things, but they do not want their desires to be fulfilled.
+        Thus, ``no person would choose a life in which he remains continually unaware of whether or not he possesses the good; that would be a life befitting plants, not human beings.''%
+        \footcite[][172]{two-conceptions-of-happiness-kraut-1979}
+    \item If a desire develops naturally and universally, we must satisfy it in order to qualify as \textit{eudaimon}.
+    \item Therefore, in order to qualify as \textit{eudaimon}, we must satisfy our second-order desire to perceive that our first-order desires are met.
+\end{enumerate}
+
+Kraut supports this argument with a thought experiment.
+He imagines a person who hears (falsely) that his family has been killed.
+Even though this person still has every first-order good for an \textit{eudaimon} life, Kraut says that he is not \textit{eudaimon} because he lacks the self-perception that he has a good life.
+In other words, the person grieves, and that grief impedes his happiness.
+
+As a bonus, Kraut points out that his arguments work no matter what we think about the role of moral goodness in Aristotle's ideal life.
+That is, Kraut makes ``no appeal\dots to Aristotle's theory that the best life is devoted to virtuous activity.''%
+\footcite[][174]{two-conceptions-of-happiness-kraut-1979}
+Instead, Kraut uses an argument that ``depends solely on some highly general features of human nature, and the point that a \textit{eudaimon} is without major defects.''%
+\footcite[][174]{two-conceptions-of-happiness-kraut-1979}
+
+Kraut ends this second with two clarifications.
+First, he explains that he is not claiming that the word \textit{eudaimon} was only used in ordinary speech for people who felt happy or satisfied with their lives.
+(Kraut seems to believe that this claim about language is true, but he doesn't require it for his argument to go through.)
+Second, Kraut insists that satisfaction with one's life is a necessary but not a sufficient condition of \textit{eudaimonia} for Aristotle.
+Aristotle can easily imagine cases where people are satisfied with their lives but they should not be.
+Such cases, however, do not count against Kraut's larger argument unless we believe that the contemporary concept of happiness is entirely subjective.
+Thus, Kraut makes a smooth transition to the next stage in his argument, where he will argue that the contemporary concept of happiness is not entirely subjective.
+% -]] Happy State of Mind (Section II)
+
+% [[- Bibliography
+\newpage\
+\pagestyle{references}
+\printbibliography[title={Bibliography}]
+% -]] Bibliography
+
+\end{document}
+% -]]
