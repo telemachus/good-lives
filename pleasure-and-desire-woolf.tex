@@ -1,0 +1,115 @@
+% [[- LaTeX prelude
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[no-math]{fontspec}
+\setmainfont{Baskerville}
+
+% Ugh: https://tex.stackexchange.com/a/400994/29387
+% This no longer seems necessary, but I’ll leave it for a bit.
+% \usepackage[base]{babel}
+\usepackage[nolocalmarks]{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage[variant=classic]{latin}
+\setotherlanguage[variant=ancient]{greek}
+\newfontfamily\greekfont[Script=Greek,Scale=MatchLowercase]{GFS Neohellenic}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\bfseries}
+\titleformat*{\subsubsection}{\bfseries}
+
+\usepackage{parskip}
+\usepackage{csquotes}
+\usepackage[style=windycity,citetracker=context,backend=biber]{biblatex}
+\addbibresource{good-lives.bib}
+
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage[super]{nth}
+
+\begin{hyphenrules}{latin}
+    \hyphenation{}
+\end{hyphenrules}
+
+\begin{hyphenrules}{greek}
+    \hyphenation{}
+\end{hyphenrules}
+
+\usepackage{fancyhdr}
+\fancypagestyle{notes}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{Notes on ``Pleasure and desire''}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+\fancypagestyle{references}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{Bibliography}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+
+% -]] Latex prelude
+
+% [[- LaTeX document
+\begin{document}
+
+\raggedright
+
+% [[- Title page
+% \begin{titlepage}
+% \title{Notes on Pleasure and desire (Raphael Woolf)}
+% \author{Peter Aronoff}
+% \maketitle
+% \thispagestyle{empty}
+% \end{titlepage}
+% -]]
+
+\pagestyle{notes}
+
+% [[- Introduction
+\section*{Introduction}
+
+In this brief introduction, Woolf sets the stage for his argument.
+He views Epicurus as a psychological hedonist (\textit{contra} Cooper) who defines pleasure as ``lack of pain in body (\textit{aponia}) and lack of distress in soul (\textit{ataraxia}).''%
+\footcite[][158]{pleasure-and-desire-woolf-2009}
+However, Woolf does not think that Epicurus rejected active, sensual pleasures in favor of an ascetic life.
+% -]] Introduction
+
+% [[- An Epicurean Mean? (Section I)
+\section*{An Epicurean Mean? (Section I)}
+
+Woolf contends that Epicurus argues for a mean between two bad extremes.
+On the one hand, a true ascetic regards luxury as a positive evil, and as such avoids it at all costs.
+On the other hand, someone who values luxury too much anxiously desires it and chafes when they cannot achieve it.
+The wise Epicurus, on the other hand, takes luxuries if they are reasonably easy to get but does not miss them when they are not present or too hard to get.
+
+To understand the bad extremes, Woolf uses two examples.
+First, he refers to a story about Wittgenstein.
+According to legend, Wittgenstein gave away his inherited wealth because he thought that wealth corrupted people.
+However, because Wittgenstein didn't want his money to corrupt poor people, he gave the money to his own siblings.
+Since his siblings were already wealthy, Wittgenstein reasoned that more money wouldn't hurt them as much as it would hurt poor people.
+Second, Woolf invents a scenario about plane tickets.
+He imagines a flight where there are some better tickets available for free.
+Someone like Wittgenstein would reject the free tickets to avoid corruption.
+Others might want the free tickets so much that they go to emotional extremes.
+But Epicurus gets things just right, according to Woolf.
+If Epicurus wins a free ticket, he enjoys it, but he doesn't worry much either way.
+% -]] An Epicurean Mean? (Section I)
+
+% [[- Bibliography
+\newpage\
+\pagestyle{references}
+\printbibliography[title={Bibliography}]
+% -]] Bibliography
+
+\end{document}
+% -]]
